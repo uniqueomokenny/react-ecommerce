@@ -3,6 +3,7 @@ import FormInput from '../form-input/form-input';
 
 import './sign-in.styles.scss';
 import CustomButton from '../custom-button/custom-button';
+import { signInWithGoogle } from '../../firebase/firebase.util';
 
 export default function SignIn() {
   const [values, setValues] = useState({
@@ -46,6 +47,10 @@ export default function SignIn() {
         />
 
         <CustomButton type='submit'>Sign in</CustomButton>
+
+        <CustomButton onClick={signInWithGoogle}>
+          Sign in with Google
+        </CustomButton>
       </form>
     </div>
   );
