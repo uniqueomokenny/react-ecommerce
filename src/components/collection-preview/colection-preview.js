@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './colection-preview.styles.scss';
 import CollectionItem from '../collection-item/collection-item';
 
