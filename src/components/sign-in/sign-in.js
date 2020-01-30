@@ -24,7 +24,7 @@ function SignIn(props) {
 
   const { googleSignInStart, emailSignInStart } = props;
 
-  const handleSubmit = async e => {
+  const handleSubmit = e => {
     e.preventDefault();
 
     emailSignInStart(email, password);
