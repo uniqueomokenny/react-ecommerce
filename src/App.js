@@ -10,7 +10,6 @@ import Header from './components/header/header';
 import SignInAndSignUpPage from './pages/signin-signup/signin-signup';
 import CheckoutPage from './pages/checkout/checkout';
 
-import { setCurrentUser } from './redux/user/user.action';
 import { selectCurrentUser } from './redux/user/user.selectors';
 
 class App extends React.Component {
@@ -43,8 +42,4 @@ const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser
 });
 
-const mapDispatchToProps = dispatch => ({
-  setCurrentUser: user => dispatch(setCurrentUser(user))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App);
